@@ -55,7 +55,7 @@ nav {
 }
 
 .logo-image {
-    height: 45px;
+    height: 35px;
     width: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
@@ -69,6 +69,7 @@ nav {
     color: var(--primary-color);
     font-size: 1.8rem;
     font-weight: 700;
+    line-height: 1;
 }
 
 .nav-links {
@@ -799,7 +800,7 @@ footer {
     }
     
     .logo-image {
-        height: 35px;
+        height: 28px;
     }
     
     .logo-text {
