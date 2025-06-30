@@ -92,4 +92,67 @@ document.addEventListener('DOMContentLoaded', () => {
             */
         });
     }
+
+    // Back to Top Button functionality
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.style.display = 'block';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Enhanced scroll animation for sections
+    const animatedSections = document.querySelectorAll('main section, .card, .testimonial-item, .service-card, .director-profile');
+    const animateOnScroll = () => {
+        animatedSections.forEach((section, index) => {
+            const rect = section.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight - 100;
+            
+            if (isVisible) {
+                section.style.opacity = 1;
+                section.style.transform = 'none';
+                section.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            } else if (!section.hasAttribute('data-animated')) {
+                section.style.opacity = 0;
+                section.style.transform = 'translateY(40px)';
+            }
+            
+            if (isVisible) {
+                section.setAttribute('data-animated', 'true');
+            }
+        });
+    };
+
+    // Service cards hover effect enhancement
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-15px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+
+    // Director image hover effect
+    const directorImage = document.querySelector('.director-image img');
+    if (directorImage) {
+        const directorContainer = document.querySelector('.director-image');
+        directorContainer.addEventListener('mouseenter', () => {
+            directorImage.style.transform = 'scale(1.1)';
+        });
+        
+        directorContainer.addEventListener('mouseleave', () => {
+            directorImage.style.transform = 'scale(1)';
+        });
+    }
+
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll();
 });
