@@ -318,9 +318,52 @@ nav {
     margin-bottom: 3rem;
 }
 
+/* Base Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
 .services-grid.specialized {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+}
+
+/* Missing Essential Classes */
+.bg-light-grey {
+    background-color: #f8f9fa !important;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+}
+
+.learn-more {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.learn-more:hover {
+    color: #b39254;
+    border-bottom-color: #b39254;
+    transform: translateX(5px);
 }
 
 /* Detailed Services Section */
