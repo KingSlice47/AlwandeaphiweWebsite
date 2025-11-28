@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO Meta Tags -->
     <title>Professional Property Valuation Services | Alwandeaphiwe (Pty) Ltd - South Africa</title>
-    <meta name="description" content="Comprehensive property valuation services: Residential, Commercial, Agricultural, Municipal valuations & more. Expert SACPVP registered valuers serving South Africa.">
-    <meta name="keywords" content="property valuation services, residential valuations, commercial valuations, agricultural valuations, municipal valuations, plant machinery valuations, South Africa">
+    <meta name="description"
+        content="Comprehensive property valuation services: Residential, Commercial, Agricultural, Municipal valuations & more. Expert SACPVP registered valuers serving South Africa.">
+    <meta name="keywords"
+        content="property valuation services, residential valuations, commercial valuations, agricultural valuations, municipal valuations, plant machinery valuations, South Africa">
     <meta name="author" content="Alwandeaphiwe (Pty) Ltd">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.alwandeaphiwe.co.za/services.html">
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="apple-touch-icon" href="images/logo.png">
-    
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <nav class="container">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Alwandeaphiwe Logo" class="logo-image">
-                <span class="logo-text">Alwandeaphiwe</span>
+                <img src="images/logo.jpg" alt="Alwandeaphiwe Logo" class="logo-image">
+                <!-- <span class="logo-text">Alwandeaphiwe</span> -->
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="news.html">News</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -43,215 +52,120 @@
     </header>
 
     <main>
-        <!-- Services Hero Section -->
-        <section class="services-hero">
-            <div class="container">
-                <div class="services-hero-content">
-                    <div class="services-hero-text animate-left">
-                        <h1>Professional Property Valuation Services</h1>
-                        <p>Comprehensive, accurate, and reliable property valuations across South Africa. Our expert team provides specialized services for residential, commercial, agricultural, and municipal properties.</p>
-                        <div class="services-stats">
-                            <div class="stat-item">
-                                <h3>1000+</h3>
-                                <p>Properties Valued</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3>B-BBEE</h3>
-                                <p>Level 1 Contributor</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3>SACPVP</h3>
-                                <p>Registered Valuers</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="services-hero-image animate-right">
-                        <!-- Recommended: Modern office building or commercial property aerial view -->
-                        <!-- Suggested images from Unsplash: -->
-                        <!-- - "office building architecture modern" by Scott Webb -->
-                        <!-- - "commercial real estate buildings" by Nastuh Abootalebi -->
-                        <!-- - "property valuation professional" by Campaign Creators -->
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop&crop=edges" alt="Professional property valuation services - Commercial and residential properties" loading="lazy" />
-                    </div>
-                </div>
+        <section class="section-padding bg-dark"
+            style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero-office-building.jpg'); background-size: cover; background-position: center;">
+            <div class="container text-center">
+                <h1 style="color: var(--text-light); font-size: 3rem; margin-bottom: 20px;">Our Services</h1>
+                <p style="color: var(--text-grey); max-width: 800px; margin: 0 auto; font-size: 1.2rem;">Comprehensive,
+                    accurate, and reliable property valuations across South Africa.</p>
             </div>
         </section>
 
-        <!-- Services Summary Section -->
-        <section id="services-summary" class="services-overview">
+        <section class="section-padding">
             <div class="container">
-                <h2 class="animate-on-scroll">Our Comprehensive Valuation Services</h2>
-                <p class="section-subtitle animate-on-scroll">Expert property valuations tailored to meet your specific needs across all property sectors</p>
-                
-                <!-- Primary Services Grid -->
-                <div class="services-grid primary-services">
-                    <div class="service-card featured animate-on-scroll stagger-animation">
+                <div class="section-title">
+                    <h2>Primary Services</h2>
+                    <p>Expert valuations tailored to your specific needs</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card" id="commercial">
                         <div class="service-icon">🏢</div>
                         <h3>Commercial & Industrial</h3>
-                        <p>Expert valuations for office buildings, retail centers, warehouses, factories, and industrial parks. Detailed analysis for investment, financing, and sale purposes.</p>
-                        <ul class="service-features">
+                        <p>Expert valuations for office buildings, retail centers, warehouses, factories, and industrial
+                            parks. Detailed analysis for investment, financing, and sale purposes.</p>
+                        <ul style="list-style: disc; padding-left: 20px; margin-top: 15px; color: #666;">
                             <li>Office Buildings & Retail Centers</li>
                             <li>Warehouses & Industrial Parks</li>
                             <li>Investment Analysis</li>
                             <li>Market Trend Assessment</li>
                         </ul>
-                        <a href="#commercial-details" class="learn-more">Learn More →</a>
                     </div>
-                    
-                    <div class="service-card featured animate-on-scroll stagger-animation">
+
+                    <div class="service-card" id="residential">
                         <div class="service-icon">🏠</div>
                         <h3>Residential Properties</h3>
-                        <p>Accurate valuations for houses, apartments, townhouses, and vacant residential land. Professional assessments for sale, purchase, and mortgage purposes.</p>
-                        <ul class="service-features">
+                        <p>Accurate valuations for houses, apartments, townhouses, and vacant residential land.
+                            Professional assessments for sale, purchase, and mortgage purposes.</p>
+                        <ul style="list-style: disc; padding-left: 20px; margin-top: 15px; color: #666;">
                             <li>Houses & Apartments</li>
                             <li>Townhouses & Complexes</li>
                             <li>Vacant Residential Land</li>
                             <li>Mortgage Valuations</li>
                         </ul>
-                        <a href="#residential-details" class="learn-more">Learn More →</a>
                     </div>
-                    
-                    <div class="service-card featured animate-on-scroll stagger-animation">
+
+                    <div class="service-card" id="agricultural">
                         <div class="service-icon">🌾</div>
                         <h3>Agricultural Properties</h3>
-                        <p>Specialized agricultural valuations including farms, smallholdings, and agricultural enterprises. Comprehensive assessment of land use and agricultural potential.</p>
-                        <ul class="service-features">
+                        <p>Specialized agricultural valuations including farms, smallholdings, and agricultural
+                            enterprises. Comprehensive assessment of land use and agricultural potential.</p>
+                        <ul style="list-style: disc; padding-left: 20px; margin-top: 15px; color: #666;">
                             <li>Farms & Smallholdings</li>
                             <li>Agricultural Enterprises</li>
                             <li>Water Rights Assessment</li>
                             <li>Soil Quality Analysis</li>
                         </ul>
-                        <a href="#agricultural-details" class="learn-more">Learn More →</a>
-                    </div>
-                </div>
-
-                <!-- Specialized Services -->
-                <div class="specialized-services animate-on-scroll">
-                    <h3>Specialized Valuation Services</h3>
-                    <div class="services-grid specialized">
-                        <div class="service-card compact animate-on-scroll stagger-animation">
-                            <div class="service-icon">⚖️</div>
-                            <h4>Municipal Valuations</h4>
-                            <p>General and Supplementary Valuation rolls, objections, and expert witness testimony.</p>
-                        </div>
-                        
-                        <div class="service-card compact animate-on-scroll stagger-animation">
-                            <div class="service-icon">🏛️</div>
-                            <h4>Insurance Valuations</h4>
-                            <p>Replacement cost valuations for insurance and risk management purposes.</p>
-                        </div>
-                        
-                        <div class="service-card compact animate-on-scroll stagger-animation">
-                            <div class="service-icon">⚙️</div>
-                            <h4>Plant & Machinery</h4>
-                            <p>Valuations for manufacturing equipment, agricultural machinery, and industrial assets.</p>
-                        </div>
-                        
-                        <div class="service-card compact animate-on-scroll stagger-animation">
-                            <div class="service-icon">📊</div>
-                            <h4>Financial Reporting</h4>
-                            <p>IFRS compliant valuations for audits, mergers, acquisitions, and corporate restructuring.</p>
-                        </div>
-                        
-                        <div class="service-card compact animate-on-scroll stagger-animation">
-                            <div class="service-icon">🏗️</div>
-                            <h4>Development Appraisals</h4>
-                            <p>Feasibility studies and development appraisals for proposed property developments.</p>
-                        </div>
-                        
-                        <div class="service-card compact animate-on-scroll stagger-animation">
-                            <div class="service-icon">⚖️</div>
-                            <h4>Expropriation Valuations</h4>
-                            <p>Independent valuations ensuring fair compensation for expropriated properties.</p>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Detailed Services Section -->
-        <section id="services-detailed" class="bg-light-grey">
+        <section class="section-padding bg-light">
             <div class="container">
-                <h2 class="animate-on-scroll">Detailed Service Descriptions</h2>
-                
-                <div class="detailed-service animate-on-scroll" id="commercial-details">
-                    <div class="service-detail-content">
-                        <div class="service-detail-text">
-                            <h3>Commercial & Industrial Valuations</h3>
-                            <p>We provide in-depth knowledge and accurate valuations for a wide range of commercial and industrial properties, including office buildings, retail centers, warehouses, factories, and industrial parks. Our valuations are crucial for investment, financing, sale, and lease purposes, offering detailed analysis of market trends, income potential, and property specifics.</p>
-                            <div class="service-benefits">
-                                <h4>Key Benefits:</h4>
-                                <ul>
-                                    <li>Comprehensive market analysis</li>
-                                    <li>Income potential assessment</li>
-                                    <li>Investment grade reporting</li>
-                                    <li>Lease advisory services</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="service-detail-image">
-                            <!-- Commercial property image - modern office building -->
-                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop" alt="Commercial property valuation" loading="lazy">
-                        </div>
-                    </div>
+                <div class="section-title">
+                    <h2>Specialized Services</h2>
+                    <p>Advanced valuation solutions for complex requirements</p>
                 </div>
-
-                <div class="detailed-service animate-on-scroll" id="residential-details">
-                    <div class="service-detail-content reverse">
-                        <div class="service-detail-text">
-                            <h3>Residential Property Valuations</h3>
-                            <p>Our expert team provides accurate and reliable valuations for all types of residential properties, including houses, apartments, townhouses, and vacant residential land. Whether for sale, purchase, mortgage, or financial reporting, we ensure a thorough assessment that reflects the true market value.</p>
-                            <div class="service-benefits">
-                                <h4>What We Cover:</h4>
-                                <ul>
-                                    <li>Market value assessments</li>
-                                    <li>Mortgage application support</li>
-                                    <li>Estate planning valuations</li>
-                                    <li>Insurance claim assessments</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="service-detail-image">
-                            <!-- Residential property image - modern family home -->
-                            <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&h=400&fit=crop" alt="Residential property valuation" loading="lazy">
-                        </div>
+                <div class="services-grid">
+                    <div class="service-card" id="municipal">
+                        <div class="service-icon">⚖️</div>
+                        <h3>Municipal Valuations</h3>
+                        <p>General and Supplementary Valuation rolls, objections, and expert witness testimony.</p>
                     </div>
-                </div>
 
-                <div class="detailed-service animate-on-scroll" id="agricultural-details">
-                    <div class="service-detail-content">
-                        <div class="service-detail-text">
-                            <h3>Agricultural Property Valuations</h3>
-                            <p>Our specialist agricultural valuers offer expert advice for a variety of agricultural properties, including farms, smallholdings, and specialized agricultural enterprises. We consider factors such as land use, water rights, soil quality, infrastructure, and agricultural potential.</p>
-                            <div class="service-benefits">
-                                <h4>Specialized Assessment:</h4>
-                                <ul>
-                                    <li>Soil quality and productivity analysis</li>
-                                    <li>Water rights evaluation</li>
-                                    <li>Infrastructure assessment</li>
-                                    <li>Agricultural potential studies</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="service-detail-image">
-                            <!-- Agricultural property image - farm landscape -->
-                            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&h=400&fit=crop" alt="Agricultural property valuation" loading="lazy">
-                        </div>
+                    <div class="service-card" id="insurance">
+                        <div class="service-icon">🏛️</div>
+                        <h3>Insurance Valuations</h3>
+                        <p>Replacement cost valuations for insurance and risk management purposes.</p>
+                    </div>
+
+                    <div class="service-card" id="plant">
+                        <div class="service-icon">⚙️</div>
+                        <h3>Plant & Machinery</h3>
+                        <p>Valuations for manufacturing equipment, agricultural machinery, and industrial assets.</p>
+                    </div>
+
+                    <div class="service-card" id="financial">
+                        <div class="service-icon">📊</div>
+                        <h3>Financial Reporting</h3>
+                        <p>IFRS compliant valuations for audits, mergers, acquisitions, and corporate restructuring.</p>
+                    </div>
+
+                    <div class="service-card" id="development">
+                        <div class="service-icon">🏗️</div>
+                        <h3>Development Appraisals</h3>
+                        <p>Feasibility studies and development appraisals for proposed property developments.</p>
+                    </div>
+
+                    <div class="service-card" id="expropriation">
+                        <div class="service-icon">⚖️</div>
+                        <h3>Expropriation Valuations</h3>
+                        <p>Independent valuations ensuring fair compensation for expropriated properties.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Call to Action Section -->
-        <section class="services-cta">
+        <section class="section-padding bg-dark text-center">
             <div class="container">
-                <div class="cta-content animate-scale">
-                    <h2>Ready to Get Your Property Valued?</h2>
-                    <p>Contact our expert team today for a professional, accurate, and reliable property valuation.</p>
-                    <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
-                        <a href="tel:+27836237482" class="btn btn-secondary">Call Now</a>
-                    </div>
+                <h2 style="color: var(--text-light); margin-bottom: 20px;">Ready to Get Your Property Valued?</h2>
+                <p
+                    style="color: var(--text-grey); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Contact our expert team today for a professional, accurate, and reliable property valuation.</p>
+                <div style="display: flex; gap: 20px; justify-content: center;">
+                    <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    <a href="tel:+27836237482" class="btn btn-secondary">Call Now</a>
                 </div>
             </div>
         </section>
@@ -260,24 +174,39 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-info">
+                <div class="footer-col">
                     <h4>Alwandeaphiwe (Pty) Ltd</h4>
-                    <p>19 Hazel Street, Lidhaven, 1724<br>
-                    Gauteng, South Africa</p>
-                    <p>Phone: <a href="tel:+27836237482">+27 83 623 7482</a><br>
-                    Email: <a href="mailto:info@alwandeaphiwe.co.za">info@alwandeaphiwe.co.za</a></p>
+                    <p>Professional Property Valuation Services.</p>
+                    <p style="margin-top: 20px;">
+                        <strong>Reg No:</strong> 2022/767292/07<br>
+                        <strong>B-BBEE:</strong> Level 1 Contributor
+                    </p>
                 </div>
-                <div class="footer-legal">
-                    <p>&copy; 2025 Alwandeaphiwe (Pty) Ltd | Reg No. 2022/767292/07<br>
-                    B-BBEE Level 1 Contributor | SACPVP Registered</p>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
                 </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p>19 Hazel Street<br>Lidhaven, 1724<br>Gauteng, South Africa</p>
+                    <p style="margin-top: 15px;">
+                        <a href="tel:+27836237482">+27 83 623 7482</a><br>
+                        <a href="mailto:info@alwandeaphiwe.co.za">info@alwandeaphiwe.co.za</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Alwandeaphiwe (Pty) Ltd. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" title="Back to top">&#8679;</button>
-
     <script src="js/script.js"></script>
 </body>
+
 </html>

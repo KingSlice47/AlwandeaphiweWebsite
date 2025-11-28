@@ -1,68 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO Meta Tags -->
     <title>Contact Property Valuation Experts | Alwandeaphiwe (Pty) Ltd - Lidhaven, Gauteng</title>
-    <meta name="description" content="Contact Alwandeaphiwe for professional property valuation services. Located at 19 Hazel Street, Lidhaven. Call 083 623 7482 for expert valuations in South Africa.">
-    <meta name="keywords" content="contact property valuer, property valuation quote, Lidhaven property valuer, Gauteng property valuation, contact Alwandeaphiwe, property appraisal consultation">
+    <meta name="description"
+        content="Contact Alwandeaphiwe for professional property valuation services. Located at 19 Hazel Street, Lidhaven. Call 083 623 7482 for expert valuations in South Africa.">
+    <meta name="keywords"
+        content="contact property valuer, property valuation quote, Lidhaven property valuer, Gauteng property valuation, contact Alwandeaphiwe, property appraisal consultation">
     <meta name="author" content="Alwandeaphiwe (Pty) Ltd">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.alwandeaphiwe.co.za/contact.html">
     <meta property="og:title" content="Contact Property Valuation Experts | Alwandeaphiwe">
-    <meta property="og:description" content="Contact Alwandeaphiwe for professional property valuation services. Located at 19 Hazel Street, Lidhaven.">
-    
+    <meta property="og:description"
+        content="Contact Alwandeaphiwe for professional property valuation services. Located at 19 Hazel Street, Lidhaven.">
+    <meta property="og:image" content="images/hero-office-building.jpg">
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.alwandeaphiwe.co.za/contact.html">
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="apple-touch-icon" href="images/logo.png">
-    
-    <!-- Structured Data for Contact Page -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "name": "Contact Alwandeaphiwe Property Valuers",
-        "description": "Contact information for professional property valuation services in South Africa",
-        "mainEntity": {
-            "@type": "ProfessionalService",
-            "name": "Alwandeaphiwe (Pty) Ltd",
-            "telephone": "+27836237482",
-            "email": "info@alwandeaphiwe.co.za",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "19 Hazel Street",
-                "addressLocality": "Lidhaven",
-                "postalCode": "1724",
-                "addressRegion": "Gauteng",
-                "addressCountry": "ZA"
-            }
-        }
-    }
-    </script>
-    
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 20px;
+            min-width: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <nav class="container">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Alwandeaphiwe Logo" class="logo-image">
-                <span class="logo-text">Alwandeaphiwe</span>
+                <img src="images/logo.jpg" alt="Alwandeaphiwe Logo" class="logo-image">
+                <!-- <span class="logo-text">Alwandeaphiwe</span> -->
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -73,51 +106,62 @@
     </header>
 
     <main>
-        <section id="contact">
+        <section class="section-padding bg-dark"
+            style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero-office-building.jpg'); background-size: cover; background-position: center;">
+            <div class="container text-center">
+                <h1 style="color: var(--text-light); font-size: 3rem; margin-bottom: 20px;">Contact Us</h1>
+                <p style="color: var(--text-grey); max-width: 800px; margin: 0 auto; font-size: 1.2rem;">Get in touch
+                    for expert property valuation services.</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
             <div class="container">
-                <h2>Contact Us</h2>
-                <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem auto;">For an obligation-free quote or more information about our services, please don't hesitate to get in touch. We look forward to hearing from you.</p>
-                <div class="contact-details">
-                    <div class="contact-info">
-                        <h3>Contact Information</h3>
-                        <div class="contact-item">
-                            <h4>📍 Office Address</h4>
-                            <p>19 Hazel Street<br>
-                            Lidhaven, 1724<br>
-                            Gauteng, South Africa</p>
+                <div class="contact-grid">
+                    <div>
+                        <h2 style="margin-bottom: 30px;">Get In Touch</h2>
+                        <p style="margin-bottom: 40px; color: #666;">For an obligation-free quote or more information
+                            about our services, please don't hesitate to get in touch. We look forward to hearing from
+                            you.</p>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4 style="margin-bottom: 5px;">Office Address</h4>
+                                <p style="color: #666;">19 Hazel Street<br>Lidhaven, 1724<br>Gauteng, South Africa</p>
+                            </div>
                         </div>
-                        
-                        <div class="contact-item">
-                            <h4>📞 Phone</h4>
-                            <p><a href="tel:+27836237482">+27 83 623 7482</a></p>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4 style="margin-bottom: 5px;">Phone</h4>
+                                <p><a href="tel:+27836237482" style="color: #666;">+27 83 623 7482</a></p>
+                            </div>
                         </div>
-                        
-                        <div class="contact-item">
-                            <h4>✉️ Email</h4>
-                            <p><a href="mailto:info@alwandeaphiwe.co.za">info@alwandeaphiwe.co.za</a></p>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h4 style="margin-bottom: 5px;">Email</h4>
+                                <p><a href="mailto:info@alwandeaphiwe.co.za"
+                                        style="color: #666;">info@alwandeaphiwe.co.za</a></p>
+                            </div>
                         </div>
-                        
-                        <div class="contact-item">
-                            <h4>🌐 Website</h4>
-                            <p><a href="https://www.alwandeaphiwe.co.za" target="_blank">www.alwandeaphiwe.co.za</a></p>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <h4>🕒 Business Hours</h4>
-                            <p>Monday - Friday: 8:00 AM - 5:00 PM<br>
-                            Saturday: By Appointment<br>
-                            Sunday: Closed</p>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <h4>🏢 Company Details</h4>
-                            <p>Reg No: 2022/767292/07<br>
-                            B-BBEE Level 1 Contributor<br>
-                            SACPVP Registered</p>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">🕒</div>
+                            <div>
+                                <h4 style="margin-bottom: 5px;">Business Hours</h4>
+                                <p style="color: #666;">Mon - Fri: 8:00 AM - 5:00 PM<br>Sat: By Appointment<br>Sun:
+                                    Closed</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-form">
-                        <h3>Send us a Message</h3>
+
+                    <div
+                        style="background: #fff; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-radius: 4px;">
+                        <h3 style="margin-bottom: 30px;">Send us a Message</h3>
                         <form action="#" method="post">
                             <div class="form-group">
                                 <input type="text" name="name" placeholder="Your Name" required>
@@ -131,25 +175,57 @@
                             <div class="form-group">
                                 <textarea name="message" placeholder="Your Message" required></textarea>
                             </div>
-                            <button type="submit" class="btn">Send Message</button>
-                            <div id="formMessage" class="form-message"></div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.547323348724!2d28.04368931544458!3d-26.19524628344265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c688034473b%3A0x235337b336e2ade!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1678886400000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <section>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.547323348724!2d28.04368931544458!3d-26.19524628344265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c688034473b%3A0x235337b336e2ade!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1678886400000!5m2!1sen!2sus"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Alwandeaphiwe (Pty) Ltd | Reg No. 2022/767292/07</p>
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Alwandeaphiwe (Pty) Ltd</h4>
+                    <p>Professional Property Valuation Services.</p>
+                    <p style="margin-top: 20px;">
+                        <strong>Reg No:</strong> 2022/767292/07<br>
+                        <strong>B-BBEE:</strong> Level 1 Contributor
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p>19 Hazel Street<br>Lidhaven, 1724<br>Gauteng, South Africa</p>
+                    <p style="margin-top: 15px;">
+                        <a href="tel:+27836237482">+27 83 623 7482</a><br>
+                        <a href="mailto:info@alwandeaphiwe.co.za">info@alwandeaphiwe.co.za</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Alwandeaphiwe (Pty) Ltd. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

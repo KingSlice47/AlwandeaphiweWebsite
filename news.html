@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO Meta Tags -->
     <title>Property Market News & Insights | Alwandeaphiwe (Pty) Ltd - Expert Analysis</title>
-    <meta name="description" content="Stay informed with the latest property market news, municipal valuation insights, and real estate trends in South Africa. Expert analysis from professional valuers.">
-    <meta name="keywords" content="property market news, municipal valuations, interest rates property, agricultural land trends, property valuation insights, South Africa real estate news">
+    <meta name="description"
+        content="Stay informed with the latest property market news, municipal valuation insights, and real estate trends in South Africa. Expert analysis from professional valuers.">
+    <meta name="keywords"
+        content="property market news, municipal valuations, interest rates property, agricultural land trends, property valuation insights, South Africa real estate news">
     <meta name="author" content="Alwandeaphiwe (Pty) Ltd">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.alwandeaphiwe.co.za/news.html">
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="apple-touch-icon" href="images/logo.png">
-    
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <nav class="container">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Alwandeaphiwe Logo" class="logo-image">
-                <span class="logo-text">Alwandeaphiwe</span>
+                <img src="images/logo.jpg" alt="Alwandeaphiwe Logo" class="logo-image">
+                <!-- <span class="logo-text">Alwandeaphiwe</span> -->
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="news.html">News</a></li>
+                <!-- <li><a href="news.html" class="active">News</a></li> -->
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -43,35 +53,75 @@
     </header>
 
     <main>
-        <section id="news-page">
+        <section class="section-padding bg-dark"
+            style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero-office-building.jpg'); background-size: cover; background-position: center;">
+            <div class="container text-center">
+                <h1 style="color: var(--text-light); font-size: 3rem; margin-bottom: 20px;">News & Insights</h1>
+                <p style="color: var(--text-grey); max-width: 800px; margin: 0 auto; font-size: 1.2rem;">Stay informed
+                    with the latest property market trends and expert analysis.</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
             <div class="container">
-                <h2>News & Insights</h2>
                 <div class="news-articles">
-                    <article id="municipal-valuations" class="news-article-card">
-                        <h3>Understanding Municipal Valuations and Your Rights</h3>
-                        <p class="article-meta">Published on: June 25, 2025 | Category: Municipal Valuations</p>
-                        <img src="images/municipal-valuation.jpg" alt="Municipal Valuation" class="article-image">
-                        <p>Municipal valuations play a crucial role in determining the property rates you pay. Every few years, municipalities conduct a general valuation of all properties within their jurisdiction to update their valuation rolls. These valuations are based on various factors, including property size, location, improvements, and market conditions.</p>
-                        <p>It's essential for property owners to understand this process and their rights. If you believe your property has been incorrectly valued, you have the right to object. Our team at Alwandeaphiwe (Pty) Ltd can assist you in reviewing your municipal valuation, preparing a strong objection, and representing your interests throughout the appeal process. Ensuring a fair valuation can lead to significant savings on your property rates.</p>
-                        <p>For more detailed information or assistance with a municipal valuation objection, please contact us.</p>
+                    <article id="municipal-valuations" class="news-article-card"
+                        style="margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid #eee;">
+                        <h3 style="margin-bottom: 10px;">Understanding Municipal Valuations and Your Rights</h3>
+                        <p class="article-meta" style="color: #888; font-size: 0.9rem; margin-bottom: 20px;">Published
+                            on: June 25, 2025 | Category: Municipal Valuations</p>
+                        <!-- <img src="images/municipal-valuation.jpg" alt="Municipal Valuation" class="article-image" style="width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 20px; border-radius: 4px;"> -->
+                        <p>Municipal valuations play a crucial role in determining the property rates you pay. Every few
+                            years, municipalities conduct a general valuation of all properties within their
+                            jurisdiction to update their valuation rolls. These valuations are based on various factors,
+                            including property size, location, improvements, and market conditions.</p>
+                        <p>It's essential for property owners to understand this process and their rights. If you
+                            believe your property has been incorrectly valued, you have the right to object. Our team at
+                            Alwandeaphiwe (Pty) Ltd can assist you in reviewing your municipal valuation, preparing a
+                            strong objection, and representing your interests throughout the appeal process. Ensuring a
+                            fair valuation can lead to significant savings on your property rates.</p>
+                        <p>For more detailed information or assistance with a municipal valuation objection, please
+                            contact us.</p>
                     </article>
 
-                    <article id="interest-rates" class="news-article-card">
-                        <h3>The Impact of Interest Rates on South African Property Values</h3>
-                        <p class="article-meta">Published on: June 18, 2025 | Category: Market Trends</p>
-                        <img src="images/interest-rates.jpg" alt="Interest Rates" class="article-image">
-                        <p>Interest rates are a significant driver of the property market. In South Africa, changes in the prime lending rate directly influence the affordability of home loans and, consequently, property demand and values. When interest rates rise, borrowing becomes more expensive, which can cool down the property market as fewer prospective buyers can afford mortgages or their purchasing power is reduced.</p>
-                        <p>Conversely, a decrease in interest rates makes homeownership more accessible, stimulating demand and often leading to an increase in property values. Understanding these dynamics is vital for both property owners and investors. Our valuation experts continuously monitor economic indicators, including interest rate movements, to provide you with the most accurate and forward-looking property assessments.</p>
-                        <p>Stay informed about market shifts and how they might affect your property investments by consulting with our team.</p>
+                    <article id="interest-rates" class="news-article-card"
+                        style="margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid #eee;">
+                        <h3 style="margin-bottom: 10px;">The Impact of Interest Rates on South African Property Values
+                        </h3>
+                        <p class="article-meta" style="color: #888; font-size: 0.9rem; margin-bottom: 20px;">Published
+                            on: June 18, 2025 | Category: Market Trends</p>
+                        <!-- <img src="images/interest-rates.jpg" alt="Interest Rates" class="article-image" style="width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 20px; border-radius: 4px;"> -->
+                        <p>Interest rates are a significant driver of the property market. In South Africa, changes in
+                            the prime lending rate directly influence the affordability of home loans and, consequently,
+                            property demand and values. When interest rates rise, borrowing becomes more expensive,
+                            which can cool down the property market as fewer prospective buyers can afford mortgages or
+                            their purchasing power is reduced.</p>
+                        <p>Conversely, a decrease in interest rates makes homeownership more accessible, stimulating
+                            demand and often leading to an increase in property values. Understanding these dynamics is
+                            vital for both property owners and investors. Our valuation experts continuously monitor
+                            economic indicators, including interest rate movements, to provide you with the most
+                            accurate and forward-looking property assessments.</p>
+                        <p>Stay informed about market shifts and how they might affect your property investments by
+                            consulting with our team.</p>
                     </article>
 
                     <article id="agricultural-trends" class="news-article-card">
-                        <h3>Key Trends in Agricultural Land Valuations in South Africa</h3>
-                        <p class="article-meta">Published on: June 10, 2025 | Category: Agricultural Valuations</p>
-                        <img src="images/agricultural-land.jpg" alt="Agricultural Land" class="article-image">
-                        <p>The valuation of agricultural land in South Africa is influenced by a unique set of factors, including climate change, water availability, commodity prices, and land reform policies. Recent trends show a growing demand for productive agricultural land, particularly in sectors like citrus, nuts, and certain livestock farming, leading to upward pressure on values in these areas.</p>
-                        <p>However, challenges such as drought, rising input costs, and policy uncertainty can also impact valuations. Our specialized agricultural valuers possess the expertise to navigate these complexities. We conduct thorough analyses of soil quality, water rights, infrastructure, production history, and market demand for specific agricultural products to provide comprehensive and reliable valuations for farms and agricultural enterprises.</p>
-                        <p>Whether you are buying, selling, or seeking financing for agricultural property, our insights are invaluable.</p>
+                        <h3 style="margin-bottom: 10px;">Key Trends in Agricultural Land Valuations in South Africa</h3>
+                        <p class="article-meta" style="color: #888; font-size: 0.9rem; margin-bottom: 20px;">Published
+                            on: June 10, 2025 | Category: Agricultural Valuations</p>
+                        <!-- <img src="images/agricultural-land.jpg" alt="Agricultural Land" class="article-image" style="width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 20px; border-radius: 4px;"> -->
+                        <p>The valuation of agricultural land in South Africa is influenced by a unique set of factors,
+                            including climate change, water availability, commodity prices, and land reform policies.
+                            Recent trends show a growing demand for productive agricultural land, particularly in
+                            sectors like citrus, nuts, and certain livestock farming, leading to upward pressure on
+                            values in these areas.</p>
+                        <p>However, challenges such as drought, rising input costs, and policy uncertainty can also
+                            impact valuations. Our specialized agricultural valuers possess the expertise to navigate
+                            these complexities. We conduct thorough analyses of soil quality, water rights,
+                            infrastructure, production history, and market demand for specific agricultural products to
+                            provide comprehensive and reliable valuations for farms and agricultural enterprises.</p>
+                        <p>Whether you are buying, selling, or seeking financing for agricultural property, our insights
+                            are invaluable.</p>
                     </article>
                 </div>
             </div>
@@ -81,21 +131,39 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-info">
+                <div class="footer-col">
                     <h4>Alwandeaphiwe (Pty) Ltd</h4>
-                    <p>19 Hazel Street, Lidhaven, 1724<br>
-                    Gauteng, South Africa</p>
-                    <p>Phone: <a href="tel:+27836237482">+27 83 623 7482</a><br>
-                    Email: <a href="mailto:info@alwandeaphiwe.co.za">info@alwandeaphiwe.co.za</a></p>
+                    <p>Professional Property Valuation Services.</p>
+                    <p style="margin-top: 20px;">
+                        <strong>Reg No:</strong> 2022/767292/07<br>
+                        <strong>B-BBEE:</strong> Level 1 Contributor
+                    </p>
                 </div>
-                <div class="footer-legal">
-                    <p>&copy; 2025 Alwandeaphiwe (Pty) Ltd | Reg No. 2022/767292/07<br>
-                    B-BBEE Level 1 Contributor | SACPVP Registered</p>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
                 </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p>19 Hazel Street<br>Lidhaven, 1724<br>Gauteng, South Africa</p>
+                    <p style="margin-top: 15px;">
+                        <a href="tel:+27836237482">+27 83 623 7482</a><br>
+                        <a href="mailto:info@alwandeaphiwe.co.za">info@alwandeaphiwe.co.za</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Alwandeaphiwe (Pty) Ltd. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

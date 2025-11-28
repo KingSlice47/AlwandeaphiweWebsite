@@ -29,43 +29,12 @@
     <link rel="canonical" href="https://www.alwandeaphiwe.co.za/">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
     
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Alwandeaphiwe (Pty) Ltd",
-        "description": "Professional property valuation services specializing in commercial, residential, agricultural valuations and municipal objections in South Africa.",
-        "url": "https://www.alwandeaphiwe.co.za",
-        "telephone": "+27-XXX-XXX-XXXX",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "19 Hazel Street",
-            "addressLocality": "Lidhaven",
-            "postalCode": "1724",
-            "addressCountry": "ZA"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "-26.1367",
-            "longitude": "28.2411"
-        },
-        "areaServed": "South Africa",
-        "serviceType": ["Property Valuation", "Real Estate Appraisal", "Commercial Property Valuation", "Residential Property Valuation", "Agricultural Valuation", "Municipal Objections"],
-        "priceRange": "$$",
-        "openingHours": "Mo-Fr 08:00-17:00",
-        "foundingDate": "2022",
-        "legalName": "Alwandeaphiwe (Pty) Ltd",
-        "taxID": "2022/767292/07",
-        "sameAs": [
-            "https://www.linkedin.com/company/alwandeaphiwe",
-            "https://www.facebook.com/alwandeaphiwe"
-        ]
-    }
-    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -73,15 +42,14 @@
     <header>
         <nav class="container">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Alwandeaphiwe Logo" class="logo-image">
-                <span class="logo-text">Alwandeaphiwe</span>
+                <img src="images/logo.jpg" alt="Alwandeaphiwe Logo" class="logo-image">
+                <!-- <span class="logo-text">Alwandeaphiwe</span> -->
             </a>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="news.html">News</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -94,141 +62,125 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Expert Property Valuation <span>Services</span></h1>
-                    <p>Accurate, reliable, and professional valuation services across South Africa. B-BBEE Level 1 contributor with SACPVP registered valuers.</p>
-                    <div class="hero-buttons">
-                        <a href="services.html" class="btn btn-primary">Our Services</a>
-                        <a href="contact.html" class="btn btn-secondary">Get Quote</a>
-                    </div>
+                <h1>Expert Property Valuation <span>Services</span></h1>
+                <p>Accurate, reliable, and professional valuation services across South Africa. B-BBEE Level 1 contributor with SACPVP registered valuers.</p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn btn-primary">Our Services</a>
+                    <a href="contact.html" class="btn btn-secondary">Get a Quote</a>
                 </div>
+            </div>
+        </section>
+
+        <section class="about-preview">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="color: var(--text-light);">Welcome to Alwandeaphiwe</h2>
+                    <p style="color: var(--primary-color);">Your Trusted Partner in Property Valuation</p>
+                </div>
+                <p>We are a 100% black-owned, B-BBEE level 1 contributor specializing in a comprehensive range of property valuations. We are committed to excellence and providing innovative solutions in the ever-changing South African property market.</p>
+                <a href="about.html" class="btn btn-primary">Learn More About Us</a>
             </div>
         </section>
 
         <section id="services-summary" class="services-overview">
             <div class="container">
-                <h2>Our Comprehensive Services</h2>
-                <p class="section-subtitle">Professional property valuation solutions tailored to your needs</p>
+                <div class="section-title">
+                    <h2>Our Comprehensive Services</h2>
+                    <p>Professional property valuation solutions tailored to your needs</p>
+                </div>
                 <div class="services-grid">
                     <div class="service-card">
                         <div class="service-icon">🏢</div>
                         <h3>Commercial Valuations</h3>
-                        <p>Expert valuations for office buildings, retail spaces, and commercial properties.</p>
+                        <p>Expert valuations for office buildings, retail centers, and industrial parks. Investment analysis and lease advisory.</p>
                         <a href="services.html#commercial" class="learn-more">Learn More →</a>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">🏠</div>
                         <h3>Residential Valuations</h3>
-                        <p>Accurate home valuations for buying, selling, or refinancing your property.</p>
+                        <p>Accurate valuations for houses, apartments, and estates. Perfect for sales, purchases, and insurance.</p>
                         <a href="services.html#residential" class="learn-more">Learn More →</a>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">🌾</div>
                         <h3>Agricultural Valuations</h3>
-                        <p>Specialized valuations for farms, agricultural land, and rural properties.</p>
+                        <p>Specialized assessments for farms, smallholdings, and agricultural enterprises including equipment.</p>
                         <a href="services.html#agricultural" class="learn-more">Learn More →</a>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">⚖️</div>
                         <h3>Municipal Objections</h3>
-                        <p>Professional assistance with municipal valuation appeals and objections.</p>
+                        <p>Professional assistance with municipal valuation rolls, objections, and appeals to ensure fair rates.</p>
                         <a href="services.html#municipal" class="learn-more">Learn More →</a>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">📊</div>
-                        <h3>Market Analysis</h3>
-                        <p>Comprehensive market research and property investment analysis.</p>
-                        <a href="services.html#analysis" class="learn-more">Learn More →</a>
+                        <h3>Financial Reporting</h3>
+                        <p>IFRS compliant valuations for financial statements, audits, and corporate restructuring.</p>
+                        <a href="services.html#financial" class="learn-more">Learn More →</a>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">🏛️</div>
-                        <h3>Insurance Valuations</h3>
-                        <p>Replacement cost valuations for insurance and risk management purposes.</p>
-                        <a href="services.html#insurance" class="learn-more">Learn More →</a>
+                        <div class="service-icon">🏗️</div>
+                        <h3>Development Appraisals</h3>
+                        <p>Feasibility studies and viability analysis for new property developments and projects.</p>
+                        <a href="services.html#development" class="learn-more">Learn More →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <div class="container">
-                <h2>Welcome to Alwandeaphiwe (Pty) Ltd</h2>
-                <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto;">Your trusted partner in property valuation. We are a 100% black-owned, B-BBEE level 1 contributor specializing in a comprehensive range of property valuations. We are committed to excellence and providing innovative solutions in the ever-changing South African property market.</p>
-                <div style="text-align: center;">
-                    <a href="about.html" class="btn">Learn More About Us</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="bg-light-grey">
-            <div class="container">
-                <h2>What Our Clients Say</h2>
-                <div class="testimonial-slider">
-                    <div class="testimonial-item">
-                        <p>"Alwandeaphiwe provided an incredibly thorough and accurate valuation for our commercial property. Their professionalism and attention to detail were outstanding. Highly recommended!"</p>
-                        <h4>- John D., Property Developer</h4>
+        <section class="section-padding bg-dark" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('images/hero-office-building.jpg'); background-size: cover; background-attachment: fixed;">
+            <div class="container text-center">
+                <h2 style="color: var(--text-light); margin-bottom: 30px;">Why Choose Alwandeaphiwe?</h2>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 50px;">
+                    <div style="flex: 1; min-width: 250px;">
+                        <h3 class="text-gold" style="font-size: 2.5rem; margin-bottom: 10px;">10+</h3>
+                        <p style="color: var(--text-light);">Years Experience</p>
                     </div>
-                    <div class="testimonial-item">
-                        <p>"The team at Alwandeaphiwe made the municipal valuation objection process seamless and stress-free. Their expertise saved us a significant amount on our rates. Thank you!"</p>
-                        <h4>- Sarah M., Homeowner</h4>
+                    <div style="flex: 1; min-width: 250px;">
+                        <h3 class="text-gold" style="font-size: 2.5rem; margin-bottom: 10px;">1000+</h3>
+                        <p style="color: var(--text-light);">Properties Valued</p>
                     </div>
-                    <div class="testimonial-item">
-                        <p>"We relied on Alwandeaphiwe for a complex agricultural land valuation, and they delivered beyond our expectations. Their deep understanding of the sector is truly impressive."</p>
-                        <h4>- David K., Farmer</h4>
+                    <div style="flex: 1; min-width: 250px;">
+                        <h3 class="text-gold" style="font-size: 2.5rem; margin-bottom: 10px;">Level 1</h3>
+                        <p style="color: var(--text-light);">B-BBEE Contributor</p>
                     </div>
-                </div>
-                <div class="slider-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-            </div>
-        </section>
-
-        <section id="latest-news" class="bg-light-grey">
-            <div class="container">
-                <h2>Latest News & Insights</h2>
-                <div class="news-cards">
-                    <div class="card">
-                        <h3>Understanding Municipal Valuations</h3>
-                        <p>Learn about the process of municipal valuations and how they impact your property rates. Stay informed about your rights and how to object to unfair valuations.</p>
-                        <a href="news.html#municipal-valuations" class="btn btn-small">Read More</a>
-                    </div>
-                    <div class="card">
-                        <h3>The Impact of Interest Rates on Property Values</h3>
-                        <p>Explore how changes in interest rates can influence property values and what it means for buyers, sellers, and investors in the current market.</p>
-                        <a href="news.html#interest-rates" class="btn btn-small">Read More</a>
-                    </div>
-                    <div class="card">
-                        <h3>Agricultural Land Valuation Trends</h3>
-                        <p>Discover the latest trends in agricultural land valuations across South Africa, including factors affecting value and future outlooks for the sector.</p>
-                        <a href="news.html#agricultural-trends" class="btn btn-small">Read More</a>
-                    </div>
-                </div>
-                <div style="text-align: center; margin-top: 3rem;">
-                    <a href="news.html" class="btn">View All News</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" title="Back to top">&#8679;</button>
-
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-info">
+                <div class="footer-col">
                     <h4>Alwandeaphiwe (Pty) Ltd</h4>
-                    <p>19 Hazel Street, Lidhaven, 1724<br>
-                    Gauteng, South Africa</p>
-                    <p>Phone: <a href="tel:+27836237482">+27 83 623 7482</a><br>
-                    Email: <a href="mailto:info@alwandeaphiwe.co.za">info@alwandeaphiwe.co.za</a></p>
+                    <p>Professional Property Valuation Services.</p>
+                    <p style="margin-top: 20px;">
+                        <strong>Reg No:</strong> 2022/767292/07<br>
+                        <strong>B-BBEE:</strong> Level 1 Contributor
+                    </p>
                 </div>
-                <div class="footer-legal">
-                    <p>&copy; 2025 Alwandeaphiwe (Pty) Ltd | Reg No. 2022/767292/07<br>
-                    B-BBEE Level 1 Contributor | SACPVP Registered</p>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
                 </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p>19 Hazel Street<br>Lidhaven, 1724<br>Gauteng, South Africa</p>
+                    <p style="margin-top: 15px;">
+                        <a href="tel:+27836237482">+27 83 623 7482</a><br>
+                        <a href="mailto:info@alwandeaphiwe.co.za">info@alwandeaphiwe.co.za</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Alwandeaphiwe (Pty) Ltd. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
