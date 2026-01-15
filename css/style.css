@@ -1448,13 +1448,13 @@ footer .container {
 }
 
 .footer-bottom p {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: #777;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
 .footer-bottom .registration-info {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: #aaa;
     letter-spacing: 0.5px;
 }
@@ -1919,7 +1919,7 @@ footer .container {
 }
 
 .about-text li::before {
-    content: '✓';
+    content: '';
     position: absolute;
     left: 0;
     color: var(--primary-color);
@@ -2094,6 +2094,11 @@ footer .container {
 .specializations.animated .tag {
     transform: translateY(0);
     opacity: 1;
+}
+
+/* Remove checkmarks from leadership lists */
+.director-info ul li::before {
+    content: none;
 }
 
 .tag:nth-child(1) {
