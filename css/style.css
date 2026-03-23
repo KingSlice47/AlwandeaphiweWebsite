@@ -707,11 +707,14 @@ nav {
 .qualifications ul {
     list-style: none;
     padding: 0;
+    max-width: 500px;
+    margin: 0 auto 1rem auto;
 }
 
 .qualifications li {
     padding: 0.5rem 0;
     border-bottom: 1px solid #eee;
+    text-align: center;
 }
 
 .qualifications li:before {
@@ -1963,6 +1966,7 @@ footer .container {
 
 .director-info {
     position: relative;
+    text-align: center;
 }
 
 .director-info h3 {
