@@ -3,10 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
 
-    burger.addEventListener('click', () => {
-        nav.classList.toggle('nav-active');
-        burger.classList.toggle('toggle');
-    });
+    if (burger && nav) {
+        burger.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+            burger.setAttribute('aria-expanded', String(isOpen));
+        });
+    }
 
     // Testimonial Slider functionality
     const testimonials = document.querySelectorAll('.testimonial-item');
@@ -40,71 +43,161 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Initial display
-    showTestimonial(currentTestimonial);
+    // Initial display - only run where testimonials actually exist
+    if (testimonials.length) {
+        showTestimonial(currentTestimonial);
 
-    // Auto-advance testimonials every 5 seconds
-    setInterval(nextTestimonial, 5000);
+        // Auto-advance testimonials every 5 seconds
+        setInterval(nextTestimonial, 5000);
+    }
 
-    // Contact Form Submission (Client-side simulation)
+    // -----------------------------------------------------------------
+    // Contact form
+    //
+    // TO MAKE THE FORM LIVE: set FORM_ENDPOINT to your form service URL.
+    // It works with any service that accepts a POST and returns 2xx, e.g.
+    // Formspree ('https://formspree.io/f/YOUR_ID') or Web3Forms.
+    //
+    // While FORM_ENDPOINT is empty the form does NOT claim success - it
+    // shows the phone number and email address instead, so that no
+    // enquiry is silently lost.
+    // -----------------------------------------------------------------
+    const FORM_ENDPOINT = '';
+
     const contactForm = document.getElementById('contactForm');
     const formMessage = document.getElementById('formMessage');
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent actual form submission
+    if (contactForm && formMessage) {
+        const setFormMessage = (text, type) => {
+            formMessage.textContent = text;
+            formMessage.className = type ? 'form-message ' + type : 'form-message';
+        };
 
-            // Simulate form submission success
-            formMessage.textContent = 'Thank you for your message! We will get back to you shortly.';
-            formMessage.className = 'form-message success';
+        const clearFieldError = (field) => {
+            field.classList.remove('is-invalid');
+            field.removeAttribute('aria-invalid');
+            const group = field.closest('.form-group');
+            const note = group && group.querySelector('.field-error');
+            if (note) {
+                note.remove();
+            }
+        };
 
-            // Clear form fields after a short delay
-            setTimeout(() => {
-                contactForm.reset();
-                formMessage.textContent = '';
-                formMessage.className = 'form-message';
-            }, 3000);
+        const showFieldError = (field, text) => {
+            clearFieldError(field);
+            field.classList.add('is-invalid');
+            field.setAttribute('aria-invalid', 'true');
+            const note = document.createElement('p');
+            note.className = 'field-error';
+            note.textContent = text;
+            const group = field.closest('.form-group');
+            if (group) {
+                group.appendChild(note);
+            }
+        };
 
-            // In a real application, you would send the form data to a server here
-            // using fetch() or XMLHttpRequest.
-            // Example:
-            /*
-            fetch(this.action, {
-                method: this.method,
-                body: new FormData(this)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    formMessage.textContent = 'Thank you for your message! We will get back to you shortly.';
-                    formMessage.className = 'form-message success';
-                    contactForm.reset();
-                } else {
-                    formMessage.textContent = 'There was an error sending your message. Please try again.';
-                    formMessage.className = 'form-message error';
+        // Validate one field. Returns true when the value is acceptable.
+        const validateField = (field) => {
+            const value = field.value.trim();
+            const label = field.getAttribute('data-label') || 'This field';
+
+            if (!value) {
+                showFieldError(field, label + ' is required.');
+                return false;
+            }
+            if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)) {
+                showFieldError(field, 'Enter an email address we can reply to, such as name@example.co.za.');
+                return false;
+            }
+            clearFieldError(field);
+            return true;
+        };
+
+        const fields = Array.from(contactForm.querySelectorAll('input, textarea'));
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+
+        // Re-check a field once the visitor has left it, but only after it
+        // has already failed once - correcting as you type, not nagging.
+        fields.forEach((field) => {
+            field.addEventListener('blur', () => {
+                if (field.classList.contains('is-invalid')) {
+                    validateField(field);
                 }
-            })
-            .catch(error => {
-                formMessage.textContent = 'There was an error sending your message. Please try again.';
-                formMessage.className = 'form-message error';
-                console.error('Error:', error);
             });
-            */
+            field.addEventListener('input', () => {
+                if (field.classList.contains('is-invalid')) {
+                    validateField(field);
+                }
+            });
+        });
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Validate everything, then focus the first problem.
+            const failed = fields.filter((field) => !validateField(field));
+            if (failed.length) {
+                setFormMessage('Check the highlighted fields and try again.', 'error');
+                failed[0].focus();
+                return;
+            }
+
+            if (!FORM_ENDPOINT) {
+                setFormMessage(
+                    'This form is not connected yet. Please email info@alwandeaphiwe.co.za or call 072 015 9303 and we will respond the same working day.',
+                    'error'
+                );
+                return;
+            }
+
+            setFormMessage('Sending your message...', '');
+            if (submitButton) {
+                submitButton.disabled = true;
+            }
+
+            fetch(FORM_ENDPOINT, {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(contactForm)
+            })
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error('Request failed with status ' + response.status);
+                    }
+                    setFormMessage('Thank you - your message has reached us. We will respond the same working day.', 'success');
+                    contactForm.reset();
+                    fields.forEach(clearFieldError);
+                })
+                .catch(() => {
+                    setFormMessage(
+                        'Your message could not be sent. Please email info@alwandeaphiwe.co.za or call 072 015 9303.',
+                        'error'
+                    );
+                })
+                .then(() => {
+                    if (submitButton) {
+                        submitButton.disabled = false;
+                    }
+                });
         });
     }
 
-    // Back to Top Button functionality
+    // -----------------------------------------------------------------
+    // F-02: the back-to-top button is not on every page. Without these
+    // guards a null reference here aborted the rest of this routine on
+    // contact.html and news.html, disabling every feature defined below.
+    // -----------------------------------------------------------------
     const backToTopBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            backToTopBtn.style.display = 'block';
-        } else {
-            backToTopBtn.style.display = 'none';
-        }
-    });
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
     // Comprehensive Animation System
     const observerOptions = {
